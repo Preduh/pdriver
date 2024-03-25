@@ -1,29 +1,63 @@
-# Create T3 App
+# PDriver
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+Este é um projeto de estudo para criar um clone do Google Drive utilizando Next.js, Prisma ORM, Tailwind CSS e Firebase. O objetivo é aprender e praticar o desenvolvimento web full-stack, explorando tecnologias modernas e populares.
 
-## What's next? How do I make an app with this?
+## Funcionalidades Principais
 
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
+- **Autenticação de Usuários:** Os usuários podem criar contas e fazer login usando o Next Auth, que simplifica o processo de autenticação no Next.js.
+- **Armazenamento de Arquivos:** Os usuários podem fazer upload e armazenar arquivos no Firebase Storage, simulando a funcionalidade de armazenamento do Google Drive.
+- **Gerenciamento de Arquivos:** Os usuários podem visualizar, renomear, excluir e organizar seus arquivos em pastas.
+- **Segurança:** O acesso aos arquivos é protegido e os usuários só podem acessar, modificar ou excluir seus próprios arquivos.
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+## Tecnologias Utilizadas
 
-- [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
-- [Drizzle](https://orm.drizzle.team)
-- [Tailwind CSS](https://tailwindcss.com)
-- [tRPC](https://trpc.io)
+- **Next.js:** Framework React para construção de aplicativos web modernos.
+- **Prisma ORM:** Biblioteca ORM (Object-Relational Mapping) para interagir com o banco de dados SQL de forma fácil e segura.
+- **Tailwind CSS:** Framework CSS utilitário para desenvolvimento de interfaces modernas e responsivas.
+- **Next Auth:** Biblioteca de autenticação para Next.js, simplificando o processo de autenticação de usuários.
+- **Firebase:** Plataforma de desenvolvimento de aplicativos da Google, incluindo Firebase Authentication para autenticação de usuários e Firebase Storage para armazenamento de arquivos.
 
-## Learn More
+## Como Executar o Projeto
 
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
+Antes de começar, certifique-se de ter o Node.js e o npm instalados em sua máquina.
 
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
+1. **Clonar o repositório:**
 
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
+   ```
+   git clone https://github.com/Preduh/pdriver.git
+   ```
 
-## How do I deploy this?
+2. **Instalar as dependências:**
 
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+   ```
+   cd pdriver
+   pnpm install
+   ```
+
+3. **Configurar as Variáveis de Ambiente:**
+
+   - Copie o conteúdo do arquivo `.env.example` para `.env`.
+   - Preencha as variáveis de ambiente necessárias, como chaves de API do Firebase e as credenciais para autenticação com o Github, no arquivo `.env`.
+
+4. **Iniciar o banco de dados com o Docker:**
+
+   ```
+   docker-compose up -d
+   ```
+
+5. **Executar o servidor de desenvolvimento:**
+
+   ```
+   pnpm run dev
+   ```
+
+6. **Acessar o aplicativo:**
+   O aplicativo estará disponível em [http://localhost:3000](http://localhost:3000) no seu navegador.
+
+## Contribuição
+
+Contribuições são bem-vindas! Se você quiser melhorar este projeto, sinta-se à vontade para abrir uma issue ou enviar um pull request.
+
+## Licença
+
+Este projeto está licenciado sob a [MIT License](LICENSE).
